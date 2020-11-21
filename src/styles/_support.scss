@@ -1,0 +1,33 @@
+$bgColor: #fccf21;
+$addColor: #2f3562;
+$cardWidth: 300px;
+
+@mixin main-header() {
+  height: 10%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-style: none;
+}
+
+@mixin main-main() {
+  height: 90%;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+@mixin flex($dir, $jc, $ai) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@function get-vw-px($p) { 
+  @return (1vw * $p / 100);
+}
